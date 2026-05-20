@@ -124,18 +124,20 @@ body {
 }
 
 @font-face {
-    font-family: 'Inter Local';
-    src: url('/fonts/Inter-Regular.woff2') format('woff2'); /* Pakai / di depan, bukan ../fonts/ */
-    font-weight: 400;
+    font-family: 'Inter';
+    src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype-variations'),
+         url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Inter Local';
-    src: url('/fonts/Inter-Bold.woff2') format('woff2'); /* Pakai / di depan */
-    font-weight: 700;
-    font-style: normal;
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype-variations'),
+         url('/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
     font-display: swap;
 }
 
