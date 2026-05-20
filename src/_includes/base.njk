@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title | default('Perysmith M2 Pro Max') }}</title>
     <meta name="description" content="Perysmith M2 Pro Max - Spot Cleaner terbaik dengan teknologi uap panas 100°C, AI Voice, dan daya hisap 20.000 Pa">
-    <!-- Open Graph / Facebook / WhatsApp -->
+    
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ site.domain }}">
     <meta property="og:title" content="{{ title | default('Perysmith M2 Pro Max - Spot Cleaner Terbaik') }}">
     <meta property="og:description" content="Perysmith M2 Pro Max - Spot Cleaner terbaik dengan teknologi uap panas 100°C, AI Voice, dan daya hisap 20.000 Pa. Ambil promo spesial minggu ini!">
     <meta property="og:image" content="/images/logo.webp">
-    <!-- Twitter -->
+    
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="{{ site.domain }}">
     <meta name="twitter:title" content="{{ title | default('Perysmith M2 Pro Max - Spot Cleaner Terbaik') }}">
     <meta name="twitter:description" content="Perysmith M2 Pro Max - Spot Cleaner terbaik dengan teknologi uap panas 100°C, AI Voice, dan daya hisap 20.000 Pa. Ambil promo spesial minggu ini!">
     <meta name="twitter:image" content="/images/logo.webp">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -25,9 +26,6 @@
     {% include "css/style.css" %}
     </style>
 
-<script>
-  // Script Anda selanjutnya...
-</script>
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'light';
@@ -42,6 +40,7 @@
                 <img src="/images/logo.webp" class="logo-light" alt="Perysmith Logo" width="200" height="50" style="border-radius: 8px;"/>
                 <img src="/images/light-perysmith.svg" class="logo-dark" alt="Perysmith Logo" width="200" height="50" style="border-radius: 8px;"/>
             </a>
+      
             <div class="nav-controls">
                 <button class="theme-toggle" aria-label="Toggle theme" style="background: none; border: none; cursor: pointer; color: var(--color-text); font-size: 1.2rem; margin-right: 10px;">
                     <i class="fa-solid fa-moon"></i>
@@ -59,25 +58,27 @@
                 <li><a href="#harga">Harga</a></li>
                 <li class="nav-links-cta">
                     <a href="https://wa.me/{{ site.whatsapp_number }}?text=Halo%2C%20saya%20tertarik%20dengan%20promo%20Perysmith%20M2%20Pro%20Max!" class="btn-nav-mobile" target="_blank" rel="noopener noreferrer">
-                       <span class="nav-color-btn"> <i class="fa-solid fa-cart-shopping " >   </i> Pesan Sekarang</span>
+                       <span class="nav-color-btn"><i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang</span>
                     </a>
                 </li>
             </ul>
+       
             <div class="nav-backdrop" id="navBackdrop"></div>
             <div class="desktop-controls">
                 <button class="theme-toggle" aria-label="Toggle theme" style="background: none; border: none; cursor: pointer; color: var(--color-text); font-size: 1.2rem;">
                     <i class="fa-solid fa-moon"></i>
                 </button>
                 <a href="https://wa.me/{{ site.whatsapp_number }}?text=Halo%2C%20saya%20tertarik%20dengan%20promo%20Perysmith%20M2%20Pro%20Max!" class="btn-nav" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Pesan Sekarang
+                    <i class="fa-solid fa-cart-shopping"></i> Pesan Sekarang
                 </a>
             </div>
         </nav>
     </header>
+
     <main>
         {{ content | safe }}
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="footer-col brand-col">
@@ -104,19 +105,19 @@
             </div>
         </div>
     </footer>
-    <!-- WhatsApp Popup -->
+
     <div class="wa-popup" id="waPopup">
         <div class="wa-bubble" id="waBubble">
             <span class="wa-bubble-text">Ambil Promo!</span>
             <button class="wa-bubble-close" id="waBubbleClose" aria-label="Tutup">&times;</button>
         </div>
-        <a href="https://wa.me/{{ site.whatsapp_number }}?text=Halo%2C%20saya%20tertarik%20dengan%20promo%20Perysmith%20M2%20Pro%20Max!" 
-           class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
+        <a href="https://wa.me/{{ site.whatsapp_number }}?text=Halo%2C%20saya%20tertarik%20dengan%20promo%20Perysmith%20M2%20Pro%20Max!" class="wa-btn" target="_blank" rel="noopener noreferrer" aria-label="Chat WhatsApp">
             <i class="fa-brands fa-whatsapp"></i>
         </a>
         <div class="wa-pulse"></div>
     </div>
+
     <script src="/js/main.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
 </body>
 </html>

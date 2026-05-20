@@ -1,5 +1,5 @@
 // ========================================
-// PERYSMITH M2 PRO MAX — Main JS
+// PERYSMITH M2 PRO MAX — Main JS (Optimized)
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -147,18 +147,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- Active nav link on scroll ---
-    const sections = document.querySelectorAll('section[id]');
+    // --- Active nav link on scroll (Optimized with IntersectionObserver) ---
     const navAnchors = document.querySelectorAll('.nav-links a');
+    
+    const navObserverOptions = {
+        root: null,
+        rootMargin: '-30% 0px -50% 0px', // Mengunci deteksi di area tengah layar browser
+        threshold: 0
+    };
 
-    function updateActiveNav() {
-        const scrollY = window.scrollY + 100;
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            const id = section.getAttribute('id');
-
-            if (scrollY >= top && scrollY < top + height) {
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
                 navAnchors.forEach(a => {
                     a.classList.remove('active');
                     if (a.getAttribute('href') === '#' + id) {
@@ -167,10 +168,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-    }
+    }, navObserverOptions);
 
-    window.addEventListener('scroll', updateActiveNav, { passive: true });
-    updateActiveNav();
+    // Mendaftarkan semua section yang memiliki attribute ID untuk diamati
+    const sections = document.querySelectorAll('section[id]');
+    sections.forEach(section => navObserver.observe(section));
 
     // --- WhatsApp Bubble Close ---
     const waBubbleClose = document.getElementById('waBubbleClose');
