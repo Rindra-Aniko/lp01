@@ -545,7 +545,7 @@ footer { border-top: 1px solid var(--color-border); padding: 40px 5%; background
 @media (max-width: 480px) {
     .hero-text h1 { font-size: 1.8rem; }
     .hero-text h2 { font-size: 1.5rem; }
-    .price-promo { font-size: 1.9rem; }
+    .price-promo { font-size: 1.7rem; }
 }
 
 /* ========================================
